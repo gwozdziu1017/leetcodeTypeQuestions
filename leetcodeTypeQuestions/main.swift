@@ -5,6 +5,9 @@ import Cocoa
 func runTests() {
     containDuplicatesTest()
     isPalindromeTest()
+    isAnagramTest()
+    twoSumTest()
+    isValidParenthesisTest()
 }
 
 runTests()
