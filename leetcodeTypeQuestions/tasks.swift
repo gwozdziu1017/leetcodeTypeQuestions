@@ -162,3 +162,28 @@ func isValidParenthesis(s: String) -> Bool {
     }
     return list.isEmpty
 }
+
+/*
+ Given an integer array nums and an integer k, return the k most frequent elements within the array.
+ The test cases are generated such that the answer is always unique.
+ You may return the output in any order.
+*/
+func topKFrequent(nums: [Int], k: Int) -> [Int] {
+    var hashMap: [Int: Int] = [:]
+    var output: [Int] = []
+    for num in nums {
+        if hashMap.contains(where: { $0.key == num }) {
+            hashMap[num]! += 1
+        }
+        else {
+            hashMap[num] = 1
+        }
+    }
+    for _ in 0...k-1 {
+        let maxFreq = hashMap.max {a, b in a.value < b.value }
+        output.append(maxFreq!.key)
+        hashMap.removeValue(forKey: maxFreq!.key)
+    }
+
+    return output
+}

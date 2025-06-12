@@ -8,6 +8,7 @@ func runTests() {
     isAnagramTest()
     twoSumTest()
     isValidParenthesisTest()
+    topKFrequentTest()
 }
 
 runTests()

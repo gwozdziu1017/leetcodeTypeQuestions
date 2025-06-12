@@ -129,3 +129,16 @@ func isValidParenthesisTest() {
     print("Is Valid Parenthesis Passed")
 }
 /* is valid parenthesis end */
+/* top k frequent element begin */
+func topKFrequentTest() {
+    assert(
+        topKFrequent(nums: [1, 2, 2, 3, 3, 3], k: 2) == [2, 3] ||
+        topKFrequent(nums: [1, 2, 2, 3, 3, 3], k: 2) == [3, 2])
+    assert(topKFrequent(nums: [7, 7], k: 1) == [7])
+    print("Top K Frequent Element Passed")
+}
+
+
+
+
+/* top k frequent element end */
