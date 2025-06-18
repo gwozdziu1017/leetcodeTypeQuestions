@@ -184,6 +184,28 @@ func topKFrequent(nums: [Int], k: Int) -> [Int] {
         output.append(maxFreq!.key)
         hashMap.removeValue(forKey: maxFreq!.key)
     }
-
     return output
+}
+
+/*
+ You are given an integer array heights where heights[i] represents the height of the
+ ith bar.
+ You may choose any two bars to form a container. Return the maximum amount of water a container can store.
+ */
+func containerWithMostWater(heights: [Int]) -> Int {
+    var begin = 0;
+    var end = heights.count - 1
+    var area = 0
+
+    while(begin < end) {
+        var tempArea = min(heights[begin], heights[end]) * (end - begin)
+        if(heights[begin] < heights[end]) {
+            begin += 1
+        }
+        else {
+            end -= 1
+        }
+        area = max(area, tempArea)
+    }
+    return area
 }

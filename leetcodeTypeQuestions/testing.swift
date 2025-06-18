@@ -137,8 +137,15 @@ func topKFrequentTest() {
     assert(topKFrequent(nums: [7, 7], k: 1) == [7])
     print("Top K Frequent Element Passed")
 }
-
-
-
-
 /* top k frequent element end */
+/* container with most water begin */
+let containerWithMostWaterTestCases: [[Int]] = [
+    [1, 7, 2, 5, 4, 7, 3, 6],
+    [2, 2, 2]
+]
+func containerWithMostWaterTest() {
+    assert(containerWithMostWater(heights: containerWithMostWaterTestCases[0]) == 36)
+    assert(containerWithMostWater(heights: containerWithMostWaterTestCases[1]) == 4)
+    print("Container With Most Water Passed")
+}
+/* container with most water end */

@@ -9,6 +9,7 @@ func runTests() {
     twoSumTest()
     isValidParenthesisTest()
     topKFrequentTest()
+    containerWithMostWaterTest()
 }
 
 runTests()
